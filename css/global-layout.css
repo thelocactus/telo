@@ -33,6 +33,9 @@
     src: url('../fonts/WhisperedTrails-xRJ85.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+  src:
+    local(Whispered Trails),
+    url(../Fonts/WhisperedTrails-xRJ85.ttf) format("truetype");
 }
 
 .title {
