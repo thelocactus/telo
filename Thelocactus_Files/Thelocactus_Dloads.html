@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thelocactus – Overview, Species and Systematics</title>
+    <meta
+      name="description"
+      content="A detailed overview of the genus Thelocactus, including systematics, species descriptions, nomenclature and photographs." />
+    <link href="../css/Thelocactus.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- BANNER -->
+      <header class="banner">
+        <img src="../Thelocactus_Pictures/macd1024.jpg" alt="Thelocactus macdowelli" />
+        <h1 class="banner-title">The genus Thelocactus</h1>
+      </header>
+
+      <!-- NAV -->
+      <nav class="main-nav">
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../Thelocactus_Files/Thelocactus_History.html">History</a></li>
+          <li>
+            <a href="#">Systematics ▼</a>
+            <ul class="submenu">
+              <li><a href="../Thelocactus_Files/Thelocactus_Genus.html">Genus</a></li>
+              <li><a href="../Thelocactus_Files/Thelocactus_Species.html">Species</a></li>
+              <li><a href="../Thelocactus_Files/Thelocactus_Descriptions.html">First descriptions</a></li>
+              <li><a href="../Thelocactus_Files/Thelocactus_Nomenclature.html">Nomenclature</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Pictures ▼</a>
+            <ul class="submenu">
+              <li><a href="../Thelocactus_Files/Thelocactus_Pictures.html">Plants</a></li>
+              <li><a href="../Thelocactus_Files/Thelocactus_Pollen.html">Pollen</a></li>
+              <li><a href="../Thelocactus_Files/Thelocactus_Seeds.html">Seeds</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../Thelocactus_Files/Thelocactus_Maps.html">Maps</a></li>
+          <li><a href="#">Downloads</a></li>
+        </ul>
+      </nav>
+
+      <!-- MAIN -->
+      <main>
+        <section class="main-content">
+          <h2>Downloads</h2>
+          <br />
+          <p>
+            Mosco A. (2019). Specific habitat requirements and niche conservatism for nine species of the Mexican genus
+            Thelocactus (Cactaceae).
+            <a href="http://www.revista.ib.unam.mx/index.php/bio/article/view/2246" class="barl"
+              >Revista Mexicana de Biodiversidad 90: e902246.</a
+            >
+            <br /><br />
+            Mosco A. (2012). Tissue localization of betacyanins in cactus stems.
+            <a href="http://www.revista.ib.unam.mx/index.php/bio/article/view/977" class="barl"
+              >Revista Mexicana de Biodiversidad 83: 413-420.</a
+            >
+            <br /><br />
+            Mosco A. &amp; Zanovello C. (2002). An introduction to the genus <i>Thelocactus</i>.
+            <a href="../Thelocactus_Downloads/Thelocactus.pdf" class="barl">Cactus &amp; Co. 6: 144-171.</a
+            >&nbsp;&nbsp;&nbsp;&nbsp;(PDF, 4 MB) <br /><br />
+            Mosco A. &amp; Zanovello C. (2000). A phenetic analysis of the genus <i>Thelocactus</i>.
+            <a href="../Thelocactus_Downloads/Thelo_Bradleya.pdf" class="barl">Bradleya 18: 29-54.</a
+            >&nbsp;&nbsp;&nbsp;&nbsp;(PDF, 784 KB)<br />
+            <br />
+            Mosco A. &amp; Zanovello C. (1999). Nomenclatural adjustments in <i>Thelocactus</i> and
+            <i>Turbinicarpus</i>.
+            <a href="../Thelocactus_Downloads/Nomenclatural_adjustements_CCI.pdf" class="barl"
+              >Cactaceae Consensus Initiatives 7: 18.</a
+            >&nbsp;&nbsp;&nbsp;&nbsp;(PDF, 1,3 MB)<br />
+            <br />
+            Mosco A. &amp; Zanovello C. (1999). A new <i>Thelocactus</i> species from San Luis Potos&#237;.
+            <a href="../Thelocactus_Downloads/Flavus.pdf" class="barl">Cactus &amp; Co. 3: 20-23.</a
+            >&nbsp;&nbsp;&nbsp;&nbsp;(PDF, 308 KB)<br />
+            <br />
+            Mosco A. &amp; Zanovello C. (Feb., 1999). (1401) Proposal to Reject the Name
+            <i>Echinocactus smithii</i> (Cactaceae).
+            <a href="http://www.jstor.org/pss/1224650" class="barl">Taxon 48 (1): 177-178.</a><br />
+            <br />
+            Mosco A. &amp; Zanovello C. (1997). <i>Neolloydia gautii</i> Benson: a tangled taxonomic history and two
+            combinations.
+            <a href="../Thelocactus_Downloads/gautiibradleya1997.pdf" class="barl">Bradleya 15: 77-83 .</a
+            >&nbsp;&nbsp;&nbsp;&nbsp;(PDF, 15,6 MB)
+          </p>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>© 2026 Alessandro Mosco</p>
+      </footer>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      const toggle = document.querySelector(".nav-toggle");
+      const menu = document.querySelector(".nav-menu");
+
+      // Toggle navbar on mobile
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+      });
+
+      // Toggle dropdowns on mobile
+      const menuItems = document.querySelectorAll(".nav-menu > li > a");
+      menuItems.forEach((item) => {
+        item.addEventListener("click", (e) => {
+          if (window.innerWidth <= 768 && item.nextElementSibling?.classList.contains("submenu")) {
+            e.preventDefault(); // prevent default link
+            item.parentElement.classList.toggle("open");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

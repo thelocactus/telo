@@ -1,0 +1,102 @@
+.page {
+  max-width: 1024px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  background: #fff;
+}
+
+main {
+  padding: 1.5rem;
+  background-image: url("../Thelocactus_Pictures/exclusive_paper.png");
+  background-repeat: repeat;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2px 2fr;
+  gap: 1.5rem;
+}
+
+.separator {
+  background-color: #333;
+  width: 2px;
+  border-radius: 2px;
+}
+
+.side-content,
+.main-content {
+  background-image: url("../Thelocactus_Pictures/exclusive_paper.png");
+  background-repeat: repeat;
+  padding: 1rem;
+}
+
+.side-content {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+.main-content {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+h3 {
+  margin: 0 0 1em 0;
+  padding: 0;
+  font-weight: bold;
+  font-family: Arial;
+  font-size: 1.1em;
+  color: #87211a;
+}
+
+.caption {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-top: 8px;
+}
+
+.red {
+  color: #87211a;
+}
+
+.side-content .nomenclature-list a:link {
+  color: #333;
+  text-decoration: underline;
+}
+
+.side-content .nomenclature-list a:hover {
+  color: #87211a;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+  /* Pages that hide the sidebar */
+  body.hide-sidebar-mobile .side-content,
+  body.hide-sidebar-mobile .separator {
+    display: none;
+  }
+
+  body.hide-sidebar-mobile .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Pages that hide the main column */
+  body.hide-main-mobile .main-content,
+  body.hide-main-mobile .separator {
+    display: none;
+  }
+
+  body.hide-main-mobile .grid {
+    grid-template-columns: 1fr;
+  }
+}

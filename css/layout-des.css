@@ -1,0 +1,49 @@
+/* Thelocactus css copyright Alessandro Mosco */
+
+/* layout for first descriptions page */
+
+
+/* MAIN */
+.no-sidebar .main-content {
+  grid-column: 1 / -1;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.columns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1 1 250px;
+}
+
+.splist {
+  margin-bottom: 6px;
+}
+
+.sppl1 {
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.sppl1:hover {
+  text-decoration: none;
+  color: #87211a;
+}
+
+.note {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  color: #333;
+}
+
+
+
+

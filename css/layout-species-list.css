@@ -1,0 +1,112 @@
+/* Thelocactus css copyright Alessandro Mosco */
+
+/* Reset */
+
+/* MAIN */
+
+.no-sidebar .side-content,
+.no-sidebar .separator {
+  display: none;
+}
+
+.no-sidebar .grid {
+  grid-template-columns: 1fr;
+}
+
+.no-sidebar .main-content {
+  grid-column: 1 / -1;
+}
+
+
+
+.dropcap-italics {
+  font-size: 150%;
+  font-style: italic;
+}
+
+.dropcap {
+  font-size: 150%;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.columns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1 1 250px;
+}
+
+/* Species list in columns */
+/* Species / synonym list */
+.syn-list {
+  margin-top: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+
+  column-count: 3;
+  column-gap: 2rem;
+  column-fill: balance;
+}
+
+.syn-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  column-gap: 0.5rem;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+  break-inside: avoid;
+}
+
+.syn-left {
+  text-align: right;
+  padding-right: 0.4rem;
+  color: #333;
+}
+
+.syn-right {
+  padding-left: 0.4rem;
+}
+
+.syn-left a,
+.syn-right a {
+  text-decoration: underline;
+  color: #333;
+}
+
+.syn-left a:hover,
+.syn-right a:hover {
+  text-decoration: none;
+  color: #87211a;
+}
+
+/* accepted taxa */
+.accepted {
+  text-decoration: underline;
+}
+
+
+/* Smartphones */
+@media (max-width: 768px) {
+  .syn-list {
+    column-count: 1;      /* one single column */
+    column-gap: 0;
+  }
+
+  .syn-row {
+    grid-template-columns: 1fr auto 1fr; /* keep layout */
+  }
+}
+
+@media (max-width: 768px) {
+  .syn-left {
+    text-align: left;
+    padding-right: 0.3rem;
+  }
+}
+

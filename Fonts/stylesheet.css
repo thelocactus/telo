@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Jellyka - Estrya\'s Handwriting';
+    src: local('Jellyka - Estrya\'s Handwriting'), local('Jellyka-Estrya\'sHandwriting'),
+        url('Jellyka-EstryasHandwriting.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

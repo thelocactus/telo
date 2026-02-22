@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thelocactus – Overview, Species and Systematics</title>
+    <meta
+      name="description"
+      content="A detailed overview of the genus Thelocactus, including systematics, species descriptions, nomenclature and photographs." />
+    <link rel="stylesheet" href="css/global-layout.css" />
+    <link rel="stylesheet" href="css/layout-default.css" />
+  </head>
+
+  <body class="hide-sidebar-mobile">
+    <div class="page">
+      <!-- BANNER -->
+      <header class="banner">
+        <img src="Thelocactus_Pictures/macd1024.jpg" alt="Thelocactus macdowelli" />
+        <h1 class="banner-title">The genus Thelocactus</h1>
+      </header>
+
+      <!-- NAV -->
+      <nav class="main-nav">
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="Thelocactus_Files/Thelocactus_History.html">History</a></li>
+          <li>
+            <a href="#">Systematics ▼</a>
+            <ul class="submenu">
+              <li><a href="Thelocactus_Files/Thelocactus_Genus.html">Genus</a></li>
+              <li><a href="Thelocactus_Files/Thelocactus_Species.html">Species</a></li>
+              <li><a href="Thelocactus_Files/Thelocactus_Descriptions.html">First descriptions</a></li>
+              <li><a href="Thelocactus_Files/Thelocactus_Nomenclature.html">Nomenclature</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Pictures ▼</a>
+            <ul class="submenu">
+              <li><a href="Thelocactus_Files/Thelocactus_Pictures.html">Plants</a></li>
+              <li><a href="Thelocactus_Files/Thelocactus_Pollen.html">Pollen</a></li>
+              <li><a href="Thelocactus_Files/Thelocactus_Seeds.html">Seeds</a></li>
+            </ul>
+          </li>
+
+          <li><a href="Thelocactus_Files/Thelocactus_Maps.html">Maps</a></li>
+          <li><a href="Thelocactus_Files/Thelocactus_Dloads.html">Downloads</a></li>
+        </ul>
+      </nav>
+
+      <!-- MAIN -->
+      <main>
+        <div class="grid">
+          <!-- LEFT COLUMN -->
+          <aside class="side-content">
+            <img src="Thelocactus_Pictures/20120615_0024.jpg" width="300" height="200" alt="Thelocactus bicolor" />
+          </aside>
+
+          <div class="separator"></div>
+
+          <!-- RIGHT COLUMN -->
+          <section class="main-content">
+            <p>
+              <span class="dropcap">T</span>he arid lands of the central Mexico plateau are home to many cacti, among
+              which there are the <i>Thelocactus</i> species. These are small to medium sized plants with a beautiful
+              spination and showy flowers. Since their first introduction in Europe in the nineteenth century, they have
+              been very popular among collectors, mainly for their appearance, free-flowering habit and ease of
+              cultivation. The genus is small, made up of about 15-20 entities, the number varying according to the
+              authority. The names associated with this genus are many more and for a non-specialist may be difficult to
+              untangle among them. I hope to give you enough information to find the right way to better understand
+              these fascinating plants.
+            </p>
+            <br />
+            <span style="font-family: &quot;Whispered Trails&quot;, cursive; line-height: 0.8; font-size: 4em"
+              >Alessandro Mosco</span
+            >
+          </section>
+        </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>© 2026 Alessandro Mosco</p>
+      </footer>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      const toggle = document.querySelector(".nav-toggle");
+      const menu = document.querySelector(".nav-menu");
+
+      // Toggle navbar on mobile
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+      });
+
+      // Toggle dropdowns on mobile
+      const menuItems = document.querySelectorAll(".nav-menu > li > a");
+      menuItems.forEach((item) => {
+        item.addEventListener("click", (e) => {
+          if (window.innerWidth <= 768 && item.nextElementSibling?.classList.contains("submenu")) {
+            e.preventDefault(); // prevent default link
+            item.parentElement.classList.toggle("open");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

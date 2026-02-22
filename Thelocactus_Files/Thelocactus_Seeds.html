@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thelocactus – Overview, Species and Systematics</title>
+    <meta
+      name="description"
+      content="A detailed overview of the genus Thelocactus, including systematics, species descriptions, nomenclature and photographs." />
+    <link href="../css/global-layout.css" rel="stylesheet" type="text/css" />
+    <link href="../css/layout-default.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="hide-main-mobile">
+    <div class="page">
+      <!-- BANNER -->
+      <header class="banner">
+        <img src="../Thelocactus_Pictures/macd1024.jpg" alt="Thelocactus macdowelli" />
+        <h1 class="banner-title">The genus Thelocactus</h1>
+
+        <!-- <h1>Alessandro Mosco</h1> -->
+      </header>
+
+      <!-- NAV -->
+      <nav class="main-nav">
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../Thelocactus_Files/Thelocactus_History.html">History</a></li>
+          <li>
+            <a href="#">Systematics ▼</a>
+            <ul class="submenu">
+              <li><a href="../Thelocactus_Files/Thelocactus_Genus.html">Genus</a></li>
+              <li><a href="../Thelocactus_Files/Thelocactus_Species.html">Species</a></li>
+              <li><a href="../Thelocactus_Files/Thelocactus_Descriptions.html">First descriptions</a></li>
+              <li><a href="../Thelocactus_Files/Thelocactus_Nomenclature.html">Nomenclature</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Pictures ▼</a>
+            <ul class="submenu">
+              <li><a href="../Thelocactus_Files/Thelocactus_Pictures.html">Plants</a></li>
+              <li><a href="../Thelocactus_Files/Thelocactus_Pollen.html">Pollen</a></li>
+              <li><a href="#">Seeds</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../Thelocactus_Files/Thelocactus_Maps.html">Maps</a></li>
+          <li><a href="Thelocactus_Dloads.html">Downloads</a></li>
+        </ul>
+      </nav>
+
+      <!-- MAIN -->
+      <main>
+        <div class="grid">
+          <!-- LEFT COLUMN -->
+          <aside class="side-content">
+            <h3>Seed pictures</h3>
+
+            <div class="nomenclature-list">
+              <ul>
+                <li><a href="../Thelocactus_Pollen/bic_pollen.html">bicolor</a></li>
+                <li><a href="../Thelocactus_Pollen/bue_pollen.html">buekii</a></li>
+                <li><a href="../Thelocactus_Pollen/con_pollen.html">conothelos</a></li>
+                <li><a href="../Thelocactus_Pollen/has_pollen.html">hastifer</a></li>
+                <li><a href="../Thelocactus_Pollen/con_pollen.html">hexaedrophorus</a></li>
+                <li><a href="../Thelocactus_Pollen/lau_pollen.html">lausseri</a></li>
+                <li><a href="../Thelocactus_Pollen/leu_pollen.html">leucacanthus</a></li>
+                <li><a href="../Thelocactus_Pollen/con_pollen.html">macdowellii</a></li>
+                <li><a href="../Thelocactus_Pollen/con_pollen.html">multicephalus</a></li>
+                <li><a href="../Thelocactus_Pollen/rin_pollen.html">rinconensis</a></li>
+                <li><a href="../Thelocactus_Pollen/tul_pollen.html">tulensis</a></li>
+              </ul>
+            </div>
+          </aside>
+          <div class="separator"></div>
+
+          <!-- RIGHT COLUMN -->
+          <section class="main-content">
+            <br />
+            <p>
+              <span style="font-size: 150%"><i>T</i></span
+              ><i>helocactus</i> seeds are medium-sized to large, with the longest axis of 1,5-2,3 mm and a diameter of
+              1,1-1,7 mm. The hilum-micropylar border is expanded around and constricted above the hilum. Testa cells
+              are smaller near the hilum. Anticlinal boundaries are raised, straight to irregularly curved. Outer
+              periclinal walls are tabular, domed or conical with a smooth or verrucose surface sculpture.
+            </p>
+
+            <img
+              class="img-center"
+              src="../Thelocactus_Seeds_Pictures/Thelocactus_Seeds_L/Seed.png"
+              width="518"
+              height="389"
+              alt="seed morphology" /><br />
+            <img
+              class="img-center"
+              src="../Thelocactus_Seeds_Pictures/Thelocactus_Seeds_L/Seed_surface.png"
+              width="518"
+              height="359"
+              alt="seed morphology" />
+            <br />
+          </section>
+        </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>© 2026 Alessandro Mosco</p>
+      </footer>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      const toggle = document.querySelector(".nav-toggle");
+      const menu = document.querySelector(".nav-menu");
+
+      // Toggle navbar on mobile
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+      });
+
+      // Toggle dropdowns on mobile
+      const menuItems = document.querySelectorAll(".nav-menu > li > a");
+      menuItems.forEach((item) => {
+        item.addEventListener("click", (e) => {
+          if (window.innerWidth <= 768 && item.nextElementSibling?.classList.contains("submenu")) {
+            e.preventDefault(); // prevent default link
+            item.parentElement.classList.toggle("open");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

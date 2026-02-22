@@ -1,0 +1,44 @@
+.layout-630 .grid {
+  display: block;
+}
+
+.layout-630 .side-content,
+.layout-630 .separator {
+  display: none;
+}
+
+.page.layout-630 {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    min(630px, 100%)
+    1fr;
+
+  grid-template-rows: auto auto 1fr auto;
+
+  max-width: 1024px;   /* same as banner */
+  margin: 0 auto;      /* center page */
+
+  background-image: url("../Thelocactus_Pictures/exclusive_paper1.png");
+  background-repeat: repeat;
+
+  min-height: 100vh;
+}
+.layout-630 header,
+.layout-630 .main-nav,
+.layout-630 footer {
+  grid-column: 1 / -1;
+}
+
+.layout-630 main {
+  grid-column: 2;
+  background-image: url("../Thelocactus_Pictures/exclusive_paper.png");
+  background-repeat: repeat;
+  padding: clamp(1rem, 4vw, 1.5rem);
+  min-width: 0;
+}
+
+.red {
+  color: #87211a;
+}
